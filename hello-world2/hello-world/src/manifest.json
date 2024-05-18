@@ -1,0 +1,21 @@
+{
+    "testId": "139ff2a8-0ed5-446e-96e5-fb0c9f445b9a",
+    "name": "Hello World",
+    "version": "1.0.0",
+    "manifestVersion": 2,
+    "requirements": {
+        "apps": [
+            {
+                "name": "Express",
+                "apiVersion": 1
+            }
+        ]
+    },
+    "entryPoints": [
+        {
+            "type": "panel",
+            "id": "panel1",
+            "main": "index.html"
+        }
+    ]
+}
