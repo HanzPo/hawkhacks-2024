@@ -1,4 +1,5 @@
 import addOnUISdk from "https://new.express.adobe.com/static/add-on-sdk/sdk.js";
+import '@spectrum-web-components/@spectrum-web-components/bundle';
 
 addOnUISdk.ready.then(async () => {
     console.log("addOnUISdk is ready for use.");
