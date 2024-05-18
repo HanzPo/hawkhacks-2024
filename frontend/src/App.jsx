@@ -30,6 +30,13 @@ function App() {
 
   return (
     <>
+    <h1>Title</h1>
+    <h2>Filters</h2>
+    <ul>
+      <li><input type="checkbox" /><p>Test 1</p></li>
+      <li><input type="checkbox" /><p>Test 2</p></li>
+      <li><input type="checkbox" /><p>Test 3</p></li>
+    </ul>
       {opportunities.map((opportunity) => (
         <div key={opportunity.name}>
           <Opportunity
