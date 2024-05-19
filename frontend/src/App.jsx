@@ -1,46 +1,40 @@
-/* eslint-disable no-unused-vars */
+
 import { useEffect, useState } from "react";
 import Opportunity from "./components/Opportunity";
 import "./App.css";
+import { getDocumentsByTags } from "../server/apiService.js";
+
 
 function App() {
-  const [tags, setTags] = useState(["tag1", "tag2"]);
+  const [selectedTags, setSelectedTags] = useState([]);
+
+  const [tags, setTags] = useState(["Tech", "Internship", "Program", "Science", "Business", "STEM", "Law", "Policing", "Leadership", "Hackathon", "Data", "University"]);
   const [opportunities, setOpportunities] = useState([
-    {
-      name: "Testing Event",
-      location: "Toronto, ON",
-      date: "March 1",
-      description: "This is a test event",
-      tags: ["tag1", "tag2"],
-      link: "https://www.google.com",
-    },
-    {
-      name: "Another Test Event",
-      location: "Waterloo, ON",
-      date: "March 31",
-      description: "This is yet another event, this time at Waterloo",
-      tags: ["Hackathon", "Indigenous"],
-      link: "https://www.google.com",
-    },
-    {
-      name: "Third Test Event",
-      location: "Pickering, ON",
-      date: "April 20",
-      description: "Another fake event",
-      tags: ["People of Colour", "Diversity"],
-      link: "https://www.google.com",
-    },
   ]);
 
-  useEffect(() => {
-    opportunities.forEach((opportunity) => {
-      opportunity.tags.forEach((tag) => {
-        if (!tags.includes(tag)) {
-          setTags([...tags, tag]);
-        }
-      });
-    });
-  }, [opportunities, tags])
+  const handleSearch = async () => {
+    try {
+      const data = await getDocumentsByTags(selectedTags);
+      console.log("Request Send")
+      console.log(data)
+      setOpportunities(data);
+      console.log("Request fully done")
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  const handleTagChange = (tag) => {
+    const index = selectedTags.indexOf(tag);
+    if (index === -1) {
+      setSelectedTags([...selectedTags, tag]);
+    } else {
+      const updatedTags = [...selectedTags];
+      updatedTags.splice(index, 1);
+      setSelectedTags(updatedTags);
+    }
+  };
+
 
   return (
     <>
@@ -56,13 +50,16 @@ function App() {
           {tags.map((tag) => (
             <li key={tag}>
             <label>
-              <input type="checkbox" />
+              <input type="checkbox"
+              checked={selectedTags.includes(tag)} 
+              onChange={() => handleTagChange(tag)} 
+               />
               {tag}
             </label>
           </li>
           ))}
         </ul>
-        <button>Submit</button>
+        <button onClick={handleSearch}>Submit</button>
       </div>
 
       <div className="opportunities">
