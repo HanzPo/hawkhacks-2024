@@ -8,6 +8,9 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
+    "install": "npm run install:frontend && npm run setup:database",
+    "install:frontend": "npm init -y && npm install react react-dom axios @types/react @types/react-dom @vitejs/plugin-react vite",
+    "setup:database": "mongorestore --db student_opportunities_db ../database/student_opportunities_db"
   },
   "dependencies": {
     "axios": "^1.6.8",
