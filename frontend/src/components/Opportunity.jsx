@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import "./Opportunity.css"
 
-const Opportunity = ({ name, location, date, description, tags }) => {
+const Opportunity = ({ name, location, date, description, tags, link }) => {
 
   return (
     <div className="parent">
@@ -12,6 +12,7 @@ const Opportunity = ({ name, location, date, description, tags }) => {
       {tags.map((tag) => (
         <div key={tag} className="tags"><p>{tag}</p></div>
       ))}
+      <a href={link}>Visit site</a>
     </div>
   );
 };
