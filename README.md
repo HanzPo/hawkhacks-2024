@@ -30,7 +30,7 @@
 OpportunityFinder is a full-stack platform dedicated to connecting individuals with opportunities that are perfectly suited to their specific fields and preferences, whether they are paid or unpaid. Our platform is committed to promoting inclusivity, ensuring that people of color and other historically marginalized groups have equal access to these opportunities. By leveraging advanced filtering and matching algorithms, OpportunityFinder helps users discover valuable opportunities that align with their professional goals and personal interests.
 
 
-### Built With
+## Built With
 
 Here is a list of services/frameworks used:
 
@@ -50,3 +50,51 @@ Here is a list of services/frameworks used:
 [HTML5]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
 [CSS3]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
 [MongoDB]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white
+
+
+
+## To get a local copy up and running, follow these simple steps.
+
+ ### Prerequisites:
+
+* Node.js and npm
+* MongoDB
+* Git
+
+
+## Installation
+Clone the repo
+
+```
+git clone https://github.com/HanzPo/hawkhacks-2024.git
+```
+Navigate to the frontend directory
+```
+cd hawkhacks-2024/frontend
+```
+Install NPM packages
+```
+npm install
+```
+
+## Running the App
+
+Navigate to the frontend directory
+```
+cd frontend
+```
+Start the development server
+```
+npm run dev
+```
+## Database
+Ensure MongoDB is running locally.
+Import the database dump located in the database folder:
+```
+mongorestore --db student_opportunities_db ../database/student_opportunities_db
+```
+Database
+
+The database dump is included in the database folder. Ensure you have MongoDB installed and running before importing the data.
+
+
