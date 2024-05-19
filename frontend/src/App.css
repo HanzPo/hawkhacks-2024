@@ -3,9 +3,11 @@
   left: 50px;
   top: 150px;
   width: 30%;
-  border: 2px solid black;
+  border: 5px solid #aeaeae;
   border-radius: 20px;
   padding-left: 20px;
+  background-color: #f2f2f0;
+  padding-bottom: 20px;
 }
 
 .opportunities {
@@ -15,7 +17,56 @@
   float: right;
 }
 
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 18px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 3px;
+}
+
 * {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* border: 1px solid red; */
+}
+
+button {
+  background-color: #0fa3b1;
+  border: 2px solid #2f4858;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0f8d98;
+}
+
+button:active {
+  background-color: #09535a;
+}
+
+img {
+  height: 80px;
+}
+
+.top-bar {
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
 }

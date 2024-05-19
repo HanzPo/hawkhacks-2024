@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Opportunity from "./components/Opportunity";
 import "./App.css";
 
 function App() {
+  const [tags, setTags] = useState(["tag1", "tag2"]);
   const [opportunities, setOpportunities] = useState([
     {
       name: "Testing Event",
@@ -31,32 +32,37 @@ function App() {
     },
   ]);
 
+  useEffect(() => {
+    opportunities.forEach((opportunity) => {
+      opportunity.tags.forEach((tag) => {
+        if (!tags.includes(tag)) {
+          setTags([...tags, tag]);
+        }
+      });
+    });
+  }, [opportunities, tags])
+
   return (
     <>
-      <h1>Operation Opportunity</h1>
+      <div className="top-bar">
+        <h1>Operation Opportunities</h1>
+        <img src="/opportunities-logo.png" />
+      </div>
+      
       <div className="filters">
         <h2>Filters</h2>
         <h3>Tags</h3>
         <ul>
-          <li>
+          {tags.map((tag) => (
+            <li key={tag}>
             <label>
               <input type="checkbox" />
-              Test 1
+              {tag}
             </label>
           </li>
-          <li>
-            <label>
-              <input type="checkbox" />
-              Test 1
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" />
-              Test 1
-            </label>
-          </li>
+          ))}
         </ul>
+        <button>Submit</button>
       </div>
 
       <div className="opportunities">
@@ -73,6 +79,8 @@ function App() {
           </div>
         ))}
       </div>
+
+      
     </>
   );
 }
