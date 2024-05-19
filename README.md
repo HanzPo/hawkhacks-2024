@@ -27,7 +27,7 @@
 
 ## About The Project
 
-OpportunityFinder is a full-stack platform dedicated to connecting individuals with opportunities that are perfectly suited to their specific fields and preferences, whether they are paid or unpaid. Our platform is committed to promoting inclusivity, ensuring that people of color and other historically marginalized groups have equal access to these opportunities. By leveraging advanced filtering and matching algorithms, OpportunityFinder helps users discover valuable opportunities that align with their professional goals and personal interests.
+OperationOpportunities is a full-stack platform dedicated to connecting individuals with opportunities that are perfectly suited to their specific fields and preferences, whether they are paid or unpaid. Our platform is committed to promoting inclusivity, ensuring that people of color and other historically marginalized groups have equal access to these opportunities. By leveraging advanced filtering and matching algorithms, OpportunityFinder helps users discover valuable opportunities that align with their professional goals and personal interests.
 
 
 ## Built With
