@@ -36,18 +36,25 @@ function App() {
       <h1>Operation Opportunity</h1>
       <div className="filters">
         <h2>Filters</h2>
+        <h3>Tags</h3>
         <ul>
           <li>
-            <input type="checkbox" />
-            <p>Test 1</p>
+            <label>
+              <input type="checkbox" />
+              Test 1
+            </label>
           </li>
           <li>
-            <input type="checkbox" />
-            <p>Test 2</p>
+            <label>
+              <input type="checkbox" />
+              Test 1
+            </label>
           </li>
           <li>
-            <input type="checkbox" />
-            <p>Test 3</p>
+            <label>
+              <input type="checkbox" />
+              Test 1
+            </label>
           </li>
         </ul>
       </div>

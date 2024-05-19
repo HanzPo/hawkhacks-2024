@@ -1,0 +1,21 @@
+.filters {
+  position: fixed;
+  left: 50px;
+  top: 150px;
+  width: 30%;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding-left: 20px;
+}
+
+.opportunities {
+  width: 60%;
+  justify-content: right;
+  align-items: right;
+  float: right;
+}
+
+* {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* border: 1px solid red; */
+}
