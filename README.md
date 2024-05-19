@@ -11,8 +11,6 @@
       <br />
     Discover and access opportunities tailored to your field, financial status, and with a special focus on inclusivity for people of color and various minority groups.
     <br />  <br />
-    <a href="https://github.com/HanzPo/hawkhacks-2024"><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href="https://github.com/HanzPo/hawkhacks-2024/issues">Report Bug</a>  <br />
     ·
